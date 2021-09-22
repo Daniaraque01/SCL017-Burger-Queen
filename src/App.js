@@ -1,25 +1,41 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import SeleccionaTuRol from "./components/SeleccionaTuRol.jsx"
+import Cocina from './components/Cocina';
+import TomarPedido from './components/TomarPedido';
+import SushiSanKun from './assets/SushiSanKun.png';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  NavLink
+} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+      <div className="App">
+      <img src= {SushiSanKun} alt = ""/>
     </div>
+      <Switch>
+      <Route path="/" exact>
+        <SeleccionaTuRol/>
+    </Route>
+
+    <Route path="/cocina" exact>
+        <Cocina/>
+    </Route>
+
+    <Route path="/mesas" exact>
+        <TomarPedido/>
+    </Route>
+
+    </Switch>
+    </Router>
   );
 }
 
 export default App;
+
