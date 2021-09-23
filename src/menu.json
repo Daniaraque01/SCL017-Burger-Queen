@@ -1,0 +1,47 @@
+{
+    "tablas": {
+        "palta": {
+        "descripción": "Envuelto en palta, salmón, queso crema y ceboullete. 20 cortes",
+        "precio": "$11.990",
+        "foto": "PENDIENTE"
+
+        },
+
+        "vegano":{
+        "descripción": "ENvuelto en nori, palta, pepino y pimentón. 10 cortes",
+        "precio": "$7000",
+        "foto": "PENDIENTE"
+        },
+
+        "salmón": {
+            "descripción": "Envuelto en salmón, salmón y queso crema. 10 cortes", 
+            "precio": "$8.990",
+            "foto": "PENDIENTE"
+       }
+    },
+
+       "bebestibles" : {
+           "chop": {
+           "descripción":"Cerveza artesanal",
+           "precio": "$3000",
+           "foto":"PENDIENTE"     
+
+           },
+
+           "limonada":{
+               "descripción": "limonada natural o menta jengibre",
+               "precio": "$3000",
+               "foto": "PENDIENTE"
+           },
+
+           "coca-cola":{
+               "descripcion": "lata de rica bebida refrescante",
+               "precio": "$1500",
+               "foto":"PENDIENTE"
+           }
+
+
+      }
+
+
+ }
