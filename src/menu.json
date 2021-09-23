@@ -1,9 +1,10 @@
+
 {
     "tablas": {
         "palta": {
         "descripción": "Envuelto en palta, salmón, queso crema y ceboullete. 20 cortes",
         "precio": "$11.990",
-        "foto": "PENDIENTE"
+        "foto": "./assets/palta.jpeg"
 
         },
 

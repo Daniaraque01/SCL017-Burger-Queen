@@ -1,10 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
-import SeleccionaTuRol from "./components/SeleccionaTuRol.jsx"
+import SeleccionaTuRol from "./components/SeleccionaTuRol";
 import Cocina from './components/Cocina';
 import TomarPedido from './components/TomarPedido';
 import SushiSanKun from './assets/SushiSanKun.png';
-
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,10 +17,13 @@ function App() {
     <Router>
       <div className="App">
       <img src= {SushiSanKun} alt = ""/>
+     
     </div>
       <Switch>
       <Route path="/" exact>
+      <div>
         <SeleccionaTuRol/>
+        </div>
     </Route>
 
     <Route path="/cocina" exact>
