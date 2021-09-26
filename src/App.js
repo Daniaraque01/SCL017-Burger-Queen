@@ -5,8 +5,9 @@ import Cocina from './components/Cocina';
 import TomarPedido from './components/TomarPedido';
 import SushiSanKun from './assets/SushiSanKun.png';
 import imagenMesero from './assets/imagenMesero.png'
+import imagenCocinero from './assets/imagenCocinero.png'
 import 'bootstrap/dist/css/bootstrap.css';
-
+import Titulo from './components/Titulo'
 
 import {
   BrowserRouter as Router,
@@ -19,33 +20,31 @@ import {
 function App() {
   return (
     <Router>
-      <div className="App">
-      <img src= {SushiSanKun} alt = ""/>
-     
-    </div>
+<Titulo />
       <Switch>
-      <Route path="/" exact>
+        <Route path="/" exact>
 
-        <SeleccionaTuRol/>
-        <div className="container">
-          <div className="row">
-            <div className="col-3"></div>
-            <img src={imagenMesero} alt="" />
-          <button type="button" className="btn btn-primary m-12">hola</button>
-          <button type="button" className="btn btn-primary">hola</button>
+          <SeleccionaTuRol />
+          <div className="container">
+            <div className="row">
+              <div className="col-3"></div>
+              <img src={imagenMesero} alt="" />
+              <img src={imagenCocinero} alt="" />
+              <button type="button" className="btn btn-primary m-12">hola</button>
+              <button type="button" className="btn btn-primary">hola</button>
+            </div>
           </div>
-      </div>
-    </Route>
+        </Route>
 
-    <Route path="/cocina" exact>
-        <Cocina/>
-    </Route>
+        <Route path="/cocina" exact>
+          <Cocina />
+        </Route>
 
-    <Route path="/mesas" exact>
-        <TomarPedido/>
-    </Route>
+        <Route path="/mesas" exact>
+          <TomarPedido />
+        </Route>
 
-    </Switch>
+      </Switch>
     </Router>
   );
 }
