@@ -2,8 +2,8 @@ import React from 'react'
 
 const seleccionaTuRol = () => {
     return (
-        <div>
-            <h1>estoy dentro "selecciona tu rol"</h1>
+        <div className="text-center">
+            <h1>Selecciona tu rol</h1>
         </div>
     )
 }

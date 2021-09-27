@@ -8,7 +8,7 @@ const Titulo = () => {
         </div>
 
         <div class="row">
-          <div class="col-12 text-center"><h1>Sushi San-Kun</h1></div>
+          <div class="col-12 text-center"><h1>Sushi <strong>San-Kun</strong></h1></div>
         </div>
       </div> 
     )

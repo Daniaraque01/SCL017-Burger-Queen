@@ -8,6 +8,9 @@ import imagenMesero from './assets/imagenMesero.png'
 import imagenCocinero from './assets/imagenCocinero.png'
 import 'bootstrap/dist/css/bootstrap.css';
 import Titulo from './components/Titulo'
+import ImagenCocinerx from './components/ImagenCocinerx';
+import ImagenMeserx from './components/ImagenMeserx'; 
+import Card from './components/Card'
 
 import {
   BrowserRouter as Router,
@@ -25,16 +28,14 @@ function App() {
         <Route path="/" exact>
 
           <SeleccionaTuRol />
-          <div className="container">
-            <div className="row">
-              <div className="col-3"></div>
-              <img src={imagenMesero} alt="" />
-              <img src={imagenCocinero} alt="" />
-              <button type="button" className="btn btn-primary m-12">hola</button>
-              <button type="button" className="btn btn-primary">hola</button>
-            </div>
-          </div>
+          <Link to = "/mesas">
+          <ImagenMeserx />
+          </Link>
+          <Link to = "/cocina">
+          <ImagenCocinerx />
+          </Link>
         </Route>
+        
 
         <Route path="/cocina" exact>
           <Cocina />
@@ -42,6 +43,7 @@ function App() {
 
         <Route path="/mesas" exact>
           <TomarPedido />
+          <Card />
         </Route>
 
       </Switch>

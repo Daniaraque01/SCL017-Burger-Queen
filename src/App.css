@@ -1,3 +1,27 @@
+*{
+  font-family: 'Archivo Narrow', sans-serif;
+}
+.sushiSanKun-img{
+  height: 210px;
+  
+}
+.button-text{
+  font-size: 49px;
+  margin-bottom: auto;
+}
+
+.sinPadding{
+  padding: 0%;
+  box-shadow: 0 0.3rem 0.8rem rgba(0,0,0,0.9);;
+}
+
+.cardShadow {
+  box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3);
+}
+
+.float-h3{
+  float: right;
+}
 .App {
   text-align: center;
 }
