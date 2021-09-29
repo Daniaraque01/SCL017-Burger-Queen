@@ -1,50 +1,52 @@
-[ 
+
 {
-    "tablas": {
-        
-        "palta": {
-        "descripcion": "Envuelto en palta, salmón, queso crema y ceboullete. 20 cortes",
-        "precio": "$11.990",
-        "foto": "./assets/palta.jpeg"
+   
 
-        },
+    "tablas":[
 
-        "vegano":{
-        "descripcion": "ENvuelto en nori, palta, pepino y pimentón. 10 cortes",
-        "precio": "$7000",
-        "foto": "PENDIENTE"
-        },
+       {
+          "tipo":"Palta",
+          "descripcion":"Envuelto en palta, salmón, queso crema y ceboullete. 20 cortes",
+          "precio":"$11.990",
+          "foto":"https://imgur.com/73KWPtJ"
+       },
 
-        "salmón": {
-            "descripcion": "Envuelto en salmón, salmón y queso crema. 10 cortes", 
-            "precio": "$8.990",
-            "foto": "PENDIENTE"
+       {
+          "tipo":"Vegano",
+          "descripcion":"Envuelto en nori, palta, pepino y pimentón. 10 cortes",
+          "precio":"$7000",
+          "foto":"https://imgur.com/86W4yr1"
+       },
+
+       {
+          "tipo":"Salmón",
+          "descripcion":"Envuelto en salmón, salmón y queso crema. 10 cortes",
+          "precio":"$8.990",
+          "foto":"https://imgur.com/kWFMV0w"
        }
-    },
+    ],
 
-       "bebestibles" : {
-           "chop": {
-           "descripcion":"Cerveza artesanal",
-           "precio": "$3000",
-           "foto":"PENDIENTE"     
+    "bebestibles":[
+       {
+          "tipo":"Chop",
+          "descripcion":"Cerveza artesanal",
+          "precio":"$3000",
+          "foto":"https://imgur.com/jWLycBD"
+       },
 
-           },
+       {
+          "tipo":"limonada",
+          "descripcion":"limonada natural o menta jengibre",
+          "precio":"$3000",
+          "foto":"https://imgur.com/UO1o3L1"
+       },
 
-           "limonada":{
-               "descripcion": "limonada natural o menta jengibre",
-               "precio": "$3000",
-               "foto": "PENDIENTE"
-           },
-
-           "coca-cola":{
-               "descripcion": "lata de rica bebida refrescante",
-               "precio": "$1500",
-               "foto":"PENDIENTE"
-           }
-
-
-      }
-
-
+       {
+          "tipo":"Coca-cola",
+          "descripcion":"lata de rica bebida refrescante",
+          "precio":"$1500",
+          "foto":"https://imgur.com/xZQ8jGl"
+       }
+    ]
+  
  }
-]
