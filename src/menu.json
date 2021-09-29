@@ -8,21 +8,21 @@
           "tipo":"Palta",
           "descripcion":"Envuelto en palta, salmón, queso crema y ceboullete. 20 cortes",
           "precio":"$11.990",
-          "foto":"https://imgur.com/73KWPtJ"
+          "foto":"https://i.imgur.com/73KWPtJ.jpg"
        },
 
        {
           "tipo":"Vegano",
           "descripcion":"Envuelto en nori, palta, pepino y pimentón. 10 cortes",
           "precio":"$7000",
-          "foto":"https://imgur.com/86W4yr1"
+          "foto":"https://i.imgur.com/86W4yr1.jpg"
        },
 
        {
           "tipo":"Salmón",
           "descripcion":"Envuelto en salmón, salmón y queso crema. 10 cortes",
           "precio":"$8.990",
-          "foto":"https://imgur.com/kWFMV0w"
+          "foto":"https://i.imgur.com/kWFMV0w.png"
        }
     ],
 
@@ -31,21 +31,21 @@
           "tipo":"Chop",
           "descripcion":"Cerveza artesanal",
           "precio":"$3000",
-          "foto":"https://imgur.com/jWLycBD"
+          "foto":"https://i.imgur.com/jWLycBD.jpg"
        },
 
        {
           "tipo":"limonada",
           "descripcion":"limonada natural o menta jengibre",
           "precio":"$3000",
-          "foto":"https://imgur.com/UO1o3L1"
+          "foto":"https://i.imgur.com/UO1o3L1.jpg"
        },
 
        {
           "tipo":"Coca-cola",
           "descripcion":"lata de rica bebida refrescante",
           "precio":"$1500",
-          "foto":"https://imgur.com/xZQ8jGl"
+          "foto":"https://i.imgur.com/xZQ8jGl.jpg"
        }
     ]
   

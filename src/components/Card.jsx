@@ -23,18 +23,36 @@ let decrement= () => setNumber(number -1);
                    {console.log(data)}
                  <div className="row no-gutters">
                    <div className="col-md-3">
-                     <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Tesla_the_cat_2.jpg" class="card-img" alt=""/>
+                     <img src={data.foto} className="card-img" alt=""/>
                    </div>
                    <div className="col-md-8">
                      <div className="card-body">
-                       <h2 className="card-title">Gatito</h2>
-                     <p className="card-text">
-                       {/* {data.tablas.palta.descripcion} */}
-                     </p>
+                       <h2 className="card-title">{data.tipo}</h2>
+                     <p className="card-text">{data.descripcion}</p>
                      <button onClick={decrement} className="btn btn-warning btn-sm">-</button>
                 <h3>{number}</h3>
                 <button onClick={increment} className="btn btn-warning btn-sm">+</button>
-                <h3 className="float-h3">PRECIO</h3>
+                <h3 className="float-h3">{data.precio}</h3>
+              </div>
+            </div>
+          </div>
+          </div>
+                ))}
+                {menu.bebestibles.map((data, index)=>(
+                 <div key={index} className="card mb-3 cardShadow">
+                   {console.log(data)}
+                 <div className="row no-gutters">
+                   <div className="col-md-3">
+                     <img src={data.foto} className="card-img" alt=""/>
+                   </div>
+                   <div className="col-md-8">
+                     <div className="card-body">
+                       <h2 className="card-title">{data.tipo}</h2>
+                     <p className="card-text">{data.descripcion}</p>
+                     <button onClick={decrement} className="btn btn-warning btn-sm">-</button>
+                <h3>{number}</h3>
+                <button onClick={increment} className="btn btn-warning btn-sm">+</button>
+                <h3 className="float-h3">{data.precio}</h3>
               </div>
             </div>
           </div>
