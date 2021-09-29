@@ -2,7 +2,6 @@
 import './App.css';
 import SeleccionaTuRol from "./components/SeleccionaTuRol"
 import Cocina from './components/Cocina';
-import TomarPedido from './components/TomarPedido';
 import SushiSanKun from './assets/SushiSanKun.png';
 import imagenMesero from './assets/imagenMesero.png'
 import imagenCocinero from './assets/imagenCocinero.png'
@@ -22,11 +21,12 @@ import {
 
 function App() {
   return (
+    
     <Router>
-<Titulo />
       <Switch>
         <Route path="/" exact>
-
+        <div className="paginaPrincipal">
+        <Titulo />
           <SeleccionaTuRol />
           <Link to = "/mesas">
           <ImagenMeserx />
@@ -34,6 +34,7 @@ function App() {
           <Link to = "/cocina">
           <ImagenCocinerx />
           </Link>
+          </div>
         </Route>
         
 
@@ -42,7 +43,6 @@ function App() {
         </Route>
 
         <Route path="/mesas" exact>
-          <TomarPedido />
           <Card />
         </Route>
 

@@ -1,14 +1,20 @@
-import React from 'react'
+import React from 'react';
 import menu from '../menu.json';
 import "bootstrap/dist/css/bootstrap.css";
+import Titulo from './Titulo';
+import './Card.css';
+import TomarPedido from './TomarPedido';
 
         const Card = () => {
             const loadData = () =>JSON.parse(JSON.stringify(menu));
         
             return (
-                <div class="card mb-3 cardShadow">
-          <div class="row no-gutters">
-            <div class="col-md-3">
+        
+                <div className="card mb-3 cardShadow pantallaDos">
+                    <TomarPedido />
+                    <Titulo />
+          <div className="row no-gutters">
+            <div className="col-md-3">
               <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Tesla_the_cat_2.jpg" class="card-img" alt=""/>
             </div>
             <div className="col-md-8">
