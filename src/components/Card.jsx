@@ -10,31 +10,36 @@ import {useState} from 'react';
             const loadData = () =>JSON.parse(JSON.stringify(menu));
         
 const [number, setNumber] = useState(0);
-const [numberLess,setNumberLess] = useState(setNumber);
+const increment = () =>setNumber(number + 1);
+let decrement= () => setNumber(number -1);
+
         
             return (
                 <div className="pantallaDos">
                     <TomarPedido />
                     <Titulo />
-                    <div className="card mb-3 cardShadow">
-          <div className="row no-gutters">
-            <div className="col-md-3">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Tesla_the_cat_2.jpg" class="card-img" alt=""/>
-            </div>
-            <div className="col-md-8">
-              <div className="card-body">
-                <h2 className="card-title">Gatito</h2>
-                {menu.map((data, index)=>{
-                    return <p key={index} className="card-text">{data.tablas.palta.descripcion}</p>
-                })}
-                <button onClick={() => setNumberLess(numberLess - 1)} className="btn btn-warning btn-sm">-</button>
+                {menu.tablas.map((data, index)=>(
+                 <div key={index} className="card mb-3 cardShadow">
+                   {console.log(data)}
+                 <div className="row no-gutters">
+                   <div className="col-md-3">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Tesla_the_cat_2.jpg" class="card-img" alt=""/>
+                   </div>
+                   <div className="col-md-8">
+                     <div className="card-body">
+                       <h2 className="card-title">Gatito</h2>
+                     <p className="card-text">
+                       {/* {data.tablas.palta.descripcion} */}
+                     </p>
+                     <button onClick={decrement} className="btn btn-warning btn-sm">-</button>
                 <h3>{number}</h3>
-                <button onClick={() => setNumber(number + 1)} className="btn btn-warning btn-sm">+</button>
+                <button onClick={increment} className="btn btn-warning btn-sm">+</button>
                 <h3 className="float-h3">PRECIO</h3>
               </div>
             </div>
           </div>
           </div>
+                ))}
         </div>
             )
         }
