@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TomarPedido = () => {
+const GoBack = () => {
     return (
         <div>
         <h1>Mis pedidos</h1>
@@ -8,4 +8,4 @@ const TomarPedido = () => {
     )
 }
 
-export default TomarPedido
+export default GoBack

@@ -1,6 +1,6 @@
 import React from 'react'
 import SushiSanKun from '../assets/SushiSanKun.png'
-const Titulo = () => {
+const Tittle = () => {
     return (
         <div className="container">
         <div class="row">
@@ -14,4 +14,4 @@ const Titulo = () => {
     )
 }
 
-export default Titulo
+export default Tittle

@@ -1,9 +1,9 @@
 import React from 'react';
 import menu from '../menu.json';
 import "bootstrap/dist/css/bootstrap.css";
-import Titulo from './Titulo';
+import Tittle from './Tittle';
 import './Card.css';
-import TomarPedido from './TomarPedido';
+import GoBack from './GoBack';
 import {useState} from 'react';
 
         const Card = () => {
@@ -15,9 +15,9 @@ let decrement= () => setNumber(number -1);
 
         
             return (
-                <div className="pantallaDos">
-                    <TomarPedido />
-                    <Titulo />
+                <div className="SecondView">
+                    <GoBack />
+                    <Tittle />
                 {menu.tablas.map((data, index)=>(
                  <div key={index} className="card mb-3 cardShadow">
                    {console.log(data)}
