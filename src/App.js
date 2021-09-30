@@ -1,14 +1,11 @@
 // import logo from './logo.svg';
 import './App.css';
-import SeleccionaTuRol from "./components/SeleccionaTuRol"
-import Cocina from './components/Cocina';
-import SushiSanKun from './assets/SushiSanKun.png';
-import imagenMesero from './assets/imagenMesero.png'
-import imagenCocinero from './assets/imagenCocinero.png'
+import SelectYourRole from "./components/SelectYourRole"
+import Kitchen from './components/Kitchen';
 import 'bootstrap/dist/css/bootstrap.css';
-import Titulo from './components/Titulo'
-import ImagenCocinerx from './components/ImagenCocinerx';
-import ImagenMeserx from './components/ImagenMeserx'; 
+import Tittle from './components/Tittle'
+import ChefImg from './components/ChefImg';
+import WaistressImg from './components/WaitressImg'; 
 import Card from './components/Card'
 
 import {
@@ -25,21 +22,21 @@ function App() {
     <Router>
       <Switch>
         <Route path="/" exact>
-        <div className="paginaPrincipal">
-        <Titulo />
-          <SeleccionaTuRol />
+        <div className="startPage">
+        <Tittle />
+          <SelectYourRole />
           <Link to = "/mesas">
-          <ImagenMeserx />
+          <WaistressImg />
           </Link>
           <Link to = "/cocina">
-          <ImagenCocinerx />
+          <ChefImg />
           </Link>
           </div>
         </Route>
         
 
         <Route path="/cocina" exact>
-          <Cocina />
+          <Kitchen />
         </Route>
 
         <Route path="/mesas" exact>

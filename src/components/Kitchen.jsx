@@ -1,14 +1,14 @@
 import React from 'react'
-import Titulo from './Titulo'
+import Tittle from './Tittle'
 import './Card.css';
 
-const Cocina = () => {
+const Kitchen = () => {
     return (
         <div className="pantallaDos">
-            <Titulo />
+            <Tittle />
             <h1>cocina</h1>
         </div>
     )
 }
 
-export default Cocina
+export default Kitchen
