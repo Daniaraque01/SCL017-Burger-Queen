@@ -7,6 +7,10 @@ import Tittle from './components/Tittle'
 import ChefImg from './components/ChefImg';
 import WaistressImg from './components/WaitressImg'; 
 import Card from './components/Card'
+import CartHome from './components/CartHome';
+import GoBack from './components/GoBack';
+import Cart from "./components/Cart"
+import { CartProvider } from 'react-use-cart';
 
 import {
   BrowserRouter as Router,
@@ -16,13 +20,15 @@ import {
   NavLink
 } from "react-router-dom";
 
+
 function App() {
   return (
-    
+    <CartProvider>
     <Router>
       <Switch>
         <Route path="/" exact>
         <div className="startPage">
+          <GoBack />
         <Tittle />
           <SelectYourRole />
           <Link to = "/mesas">
@@ -40,11 +46,12 @@ function App() {
         </Route>
 
         <Route path="/mesas" exact>
-          <Card />
+          <CartHome />
         </Route>
 
       </Switch>
     </Router>
+    </CartProvider>
   );
 }
 
