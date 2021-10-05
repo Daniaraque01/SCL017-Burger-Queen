@@ -6,6 +6,11 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Tittle from './components/Tittle'
 import ChefImg from './components/ChefImg';
 import WaistressImg from './components/WaitressImg'; 
+import Card from './components/Card'
+import CartHome from './components/CartHome';
+import GoBack from './components/GoBack';
+import Cart from "./components/Cart"
+import { CartProvider } from 'react-use-cart';
 import Card from './components/Card';
 import { collection, getDocs } from "firebase/firestore";
 import db from './Firebase/FirebaseConfig';
@@ -19,6 +24,7 @@ import {
 } from "react-router-dom";
 import { useEffect } from 'react';
 
+
 function App() {
   useEffect(() => {
 
@@ -31,11 +37,12 @@ function App() {
 
   },[]);
   return (
-    
+    <CartProvider>
     <Router>
       <Switch>
         <Route path="/" exact>
         <div className="startPage">
+          <GoBack />
         <Tittle />
           <SelectYourRole />
           <Link to = "/mesas">
@@ -53,11 +60,12 @@ function App() {
         </Route>
 
         <Route path="/mesas" exact>
-          <Card />
+          <CartHome />
         </Route>
 
       </Switch>
     </Router>
+    </CartProvider>
   );
 }
 
