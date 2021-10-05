@@ -5,19 +5,18 @@ import Tittle from './Tittle';
 import './Card.css';
 import GoBack from './GoBack';
 import {useState} from 'react';
+import Board from './Board';
+import ContadorCarta from './ContadorCarta';
+import ContadorBebestibles from './ContadorBebestibles'
 
         const Card = () => {
             const loadData = () =>JSON.parse(JSON.stringify(menu));
-        
-const [number, setNumber] = useState(0);
-const increment = () =>setNumber(number + 1);
-let decrement= () => setNumber(number -1);
 
-        
             return (
                 <div className="SecondView">
                     <GoBack />
                     <Tittle />
+                    <Board />
                 {menu.tablas.map((data, index)=>(
                  <div key={index} className="card mb-3 cardShadow">
                    {console.log(data)}
@@ -29,9 +28,7 @@ let decrement= () => setNumber(number -1);
                      <div className="card-body">
                        <h2 className="card-title">{data.tipo}</h2>
                      <p className="card-text">{data.descripcion}</p>
-                     <button onClick={decrement} className="btn btn-warning btn-sm">-</button>
-                <h3>{number}</h3>
-                <button onClick={increment} className="btn btn-warning btn-sm">+</button>
+                <ContadorCarta/>
                 <h3 className="float-h3">{data.precio}</h3>
               </div>
             </div>
@@ -49,9 +46,7 @@ let decrement= () => setNumber(number -1);
                      <div className="card-body">
                        <h2 className="card-title">{data.tipo}</h2>
                      <p className="card-text">{data.descripcion}</p>
-                     <button onClick={decrement} className="btn btn-warning btn-sm">-</button>
-                <h3>{number}</h3>
-                <button onClick={increment} className="btn btn-warning btn-sm">+</button>
+                     <ContadorBebestibles/>
                 <h3 className="float-h3">{data.precio}</h3>
               </div>
             </div>
