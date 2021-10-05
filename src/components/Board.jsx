@@ -10,6 +10,14 @@ const Board = () => {
       <th scope="col">First</th>
       <th scope="col">Last</th>
       <th scope="col">Handle</th>
+            <table className="table">
+  <thead>
+    <tr>
+      <th scope="col">Cliente</th>
+      <th scope="col">Mesas</th>
+      <th scope="col">Pedido</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Precio final</th>
     </tr>
   </thead>
   <tbody>
@@ -17,6 +25,7 @@ const Board = () => {
       <th scope="row">1</th>
       <td>Mark</td>
       <td>Otto</td>
+      <td>@mdo</td>
       <td>@mdo</td>
     </tr>
     <tr>
@@ -29,6 +38,21 @@ const Board = () => {
       <th scope="row">3</th>
       <td colspan="2">Larry the Bird</td>
       <td>@twitter</td>
+    </tr>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colSpan="2">Larry the Bird</td>
+      <td>@twitter</td>
+      <td>@twitter</td>
+    </tr>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
     </tr>
   </tbody>
 </table>

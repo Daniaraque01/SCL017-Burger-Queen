@@ -4,7 +4,7 @@ import './Card.css';
 
 const Kitchen = () => {
     return (
-        <div className="pantallaDos">
+        <div className="secondView">
             <Tittle />
             <h1>cocina</h1>
         </div>
