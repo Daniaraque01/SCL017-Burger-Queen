@@ -1,6 +1,5 @@
 import React from 'react'
 import Card from './Card';
-import GoBack from './GoBack';
 import Tittle from './Tittle';
 import Board from './Board';
 import menu from "../menu.json"
@@ -11,7 +10,6 @@ const CartHome = () => {
     return (
         <div>
             <div className="SecondView">
-                    <GoBack />
                     <Tittle />
                     <Cart />
                     {menu.todoMenu.map((item, index)=>(

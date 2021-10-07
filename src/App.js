@@ -42,7 +42,6 @@ function App() {
       <Switch>
         <Route path="/" exact>
         <div className="startPage">
-          <GoBack />
         <Tittle />
           <SelectYourRole />
           <Link to = "/mesas">
