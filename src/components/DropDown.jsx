@@ -5,7 +5,7 @@ const DropDown = () => {
     return (
         <div>
             <div class="dropdown">
-  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> {/* deberia ser un select */}
     Mesa
   </button>
   <div class="dropdown-menu">

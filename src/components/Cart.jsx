@@ -14,6 +14,17 @@ const Cart = () => {
          } = useCart();
          if(isEmpty) return <h1 className = "text-center">No hay Pedidos</h1>
 
+
+         /* const sendToKitchen = async ()=>{
+         console.log(items)
+         const collectionRef= collection(db,"Comandas");
+         const payload = {items}      /* aqui como objetos irian los datos de la tabla  */ 
+         /*  await addDoc(collectionRef, payload); 
+         }*/
+
+
+         
+
     return (
         <section className = "py-4 container">
          <div className="row justify-content-center">
@@ -46,7 +57,7 @@ const Cart = () => {
                 <p className="text-end fs-3">Total a Pagar: ${cartTotal}</p>
             </div>
             <div className="col-auto">
-                <button className="btn btn-success btn-sm m-2" type= "submit">Enviar a Cocina</button>
+                <button className="btn btn-success btn-sm m-2" /*onClick={sendToKitchen} */>Enviar a Cocina</button>
                 <button className="btn btn-danger btn-sm m-2" onClick={()=>emptyCart()}>Eliminar Comanda</button>
             </div>
          </div>
