@@ -6,14 +6,13 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Tittle from './components/Tittle'
 import ChefImg from './components/ChefImg';
 import WaistressImg from './components/WaitressImg'; 
-import Card from './components/Card'
 import CartHome from './components/CartHome';
 import GoBack from './components/GoBack';
-import Cart from "./components/Cart"
 import { CartProvider } from 'react-use-cart';
 import Card from './components/Card';
 import { collection, getDocs } from "firebase/firestore";
 import db from './Firebase/FirebaseConfig';
+import 'bootstrap/dist/js/bootstrap'
 
 import {
   BrowserRouter as Router,
