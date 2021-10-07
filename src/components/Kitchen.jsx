@@ -1,12 +1,13 @@
 import React from 'react'
 import Tittle from './Tittle'
 import './Card.css';
+import CardKitchen from './CardKitchen';
 
 const Kitchen = () => {
     return (
-        <div className="pantallaDos">
+        <div className="SecondView">
             <Tittle />
-            <h1>cocina</h1>
+            <CardKitchen />
         </div>
     )
 }

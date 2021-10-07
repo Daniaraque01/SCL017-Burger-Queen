@@ -19,18 +19,14 @@ let decrement= () => setNumber(number -1);*/
 
         
             return (
-                <div className="SecondView">
-                    {/* <GoBack />
-                    <Tittle />
-                    <Board /> */}
-                {/* {menu.tablas.map((data, index)=>( */}
-                 <div /* item = {data} key={index}  */className="card mb-3 cardShadow">
+                <div className="d-flex SecondView">
+                 <div /* item = {data} key={index}  */className="card w-50 mb-3 cardShadow">
                    {/* {console.log(data)} */}
-                 <div className="row no-gutters">
+                 <div className="row">
                    <div className="col-md-3">
                      <img src={props.img} className="card-img" alt=""/>
                    </div>
-                   <div className="col-md-8">
+                   <div className="col-md-9">
                      <div className="card-body">
                        <h2 className="card-title">{props.title}</h2>
                      <p className="card-text">{props.desc}</p>
