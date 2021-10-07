@@ -7,6 +7,8 @@ import './Card.css';
 import GoBack from './GoBack';
 import Board from './Board';
 import {useState} from 'react';
+import Board from './Board';
+
 
         const Card = (props) => {
           //  const loadData = () =>JSON.parse(JSON.stringify(menu));
@@ -17,7 +19,8 @@ import {useState} from 'react';
 const increment = () =>setNumber(number + 1);
 let decrement= () => setNumber(number -1);*/
 
-        
+          
+
             return (
                 <div className="d-flex SecondView">
                  <div /* item = {data} key={index}  */className="card w-50 mb-3 cardShadow">
@@ -28,6 +31,7 @@ let decrement= () => setNumber(number -1);*/
                    </div>
                    <div className="col-md-9">
                      <div className="card-body">
+
                        <h2 className="card-title">{props.title}</h2>
                      <p className="card-text">{props.desc}</p>
                      <h3 className="float-h3">${props.price}</h3>
@@ -35,6 +39,10 @@ let decrement= () => setNumber(number -1);*/
                     {/*  <button onClick={decrement} className="btn btn-warning btn-sm">-</button>
                 <h3>{number}</h3>
                 <button onClick={increment} className="btn btn-warning btn-sm">+</button> */}
+                       <h2 className="card-title">{data.tipo}</h2>
+                     <p className="card-text">{data.descripcion}</p>
+                <ContadorCarta/>
+                <h3 className="float-h3">{data.precio}</h3>
               </div>
             </div>
           </div>
@@ -55,6 +63,8 @@ let decrement= () => setNumber(number -1);*/
                 <h3>{number}</h3>
                 <button id="increment-bebestibles"onClick={increment} className="btn btn-warning btn-sm">+</button> */}
                {/*  <button className="btn btn-warning btn-lg" onClick= {()=>addItem(data.id.item)}>Añadir</button>
+                     <p className="card-text">{data.descripcion}</p>
+                     <ContadorBebestibles/>
                 <h3 className="float-h3">{data.precio}</h3>
               </div>
             </div>
@@ -64,5 +74,6 @@ let decrement= () => setNumber(number -1);*/
         </div>
             )
         }
+
 
 export default Card
