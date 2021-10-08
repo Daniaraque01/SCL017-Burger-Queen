@@ -1,6 +1,10 @@
 import React from 'react'
 import { useCart } from "react-use-cart"
 import DropDown from './DropDown';
+import { collection, onSnapshot , addDoc} from '@firebase/firestore';
+import db from "../configfb";
+
+
 const Cart = () => {
     const { 
             isEmpty,
@@ -15,12 +19,12 @@ const Cart = () => {
          if(isEmpty) return <h1 className = "text-center">No hay Pedidos</h1>
 
 
-         /* const sendToKitchen = async ()=>{
-         console.log(items)
+          const sendToKitchen = async ()=>{
          const collectionRef= collection(db,"Comandas");
          const payload = {items}      /* aqui como objetos irian los datos de la tabla  */ 
-         /*  await addDoc(collectionRef, payload); 
-         }*/
+          await addDoc(collectionRef, payload); 
+          }
+         
 
 
          
@@ -57,7 +61,7 @@ const Cart = () => {
                 <p className="text-end fs-3">Total a Pagar: ${cartTotal}</p>
             </div>
             <div className="col-auto">
-                <button className="btn btn-success btn-sm m-2" /*onClick={sendToKitchen} */>Enviar a Cocina</button>
+                <button className="btn btn-success btn-sm m-2" onClick={sendToKitchen}>Enviar a Cocina</button>
                 <button className="btn btn-danger btn-sm m-2" onClick={()=>emptyCart()}>Eliminar Comanda</button>
             </div>
          </div>

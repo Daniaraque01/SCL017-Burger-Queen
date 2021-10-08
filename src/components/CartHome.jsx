@@ -1,7 +1,6 @@
 import React from 'react'
 import Card from './Card';
 import Tittle from './Tittle';
-import Board from './Board';
 import menu from "../menu.json"
 import Cart from './Cart';
 
