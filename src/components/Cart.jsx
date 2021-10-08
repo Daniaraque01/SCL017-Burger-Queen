@@ -1,6 +1,6 @@
 import React from 'react'
 import { useCart } from "react-use-cart"
-import ModalPrueba from './ModalPrueba';
+import Modal from './Modal';
 
 import DropDown from './DropDown';
 const Cart = () => {
@@ -59,8 +59,8 @@ const Cart = () => {
                 <p className="text-end fs-3">Total a Pagar: ${cartTotal}</p>
             </div>
             <div className="col-auto">
-                    <ModalPrueba name="modal1" className="btn btn-danger m-2" buttonTextShowingTheModal="Enviar a cocina" title="¿estas seguro?" description="este pedido se enviara a cocina" textCancel="Cancelar" textSend="Enviar" />
-                    <ModalPrueba name="modal2" className="btn btn-danger m-2" buttonTextShowingTheModal="eliminar comanda" title="¿estas seguro?" description="este pedido se eliminara" textCancel="Cancelar" textSend="Eliminar" onClick={() => emptyCart()}/>
+                    <Modal name="modal1" className="btn btn-danger m-2" buttonTextShowingTheModal="Enviar a cocina" title="¿estas seguro?" description="este pedido se enviara a cocina" textCancel="Cancelar" textSend="Enviar" />
+                    <Modal name="modal2" className="btn btn-danger m-2" buttonTextShowingTheModal="eliminar comanda" title="¿estas seguro?" description="este pedido se eliminara" textCancel="Cancelar" textSend="Eliminar" onClick={() => emptyCart()}/>
 
                     </div>
                 </div>

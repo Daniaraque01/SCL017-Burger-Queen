@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { useCart } from "react-use-cart"
 
-const ModalPrueba = ({ title, description, textCancel, textSend, buttonTextShowingTheModal , className, name}) => {
+const Modal = ({ title, description, textCancel, textSend, buttonTextShowingTheModal , className, name}) => {
  const {
   emptyCart
   
@@ -36,4 +36,4 @@ const ModalPrueba = ({ title, description, textCancel, textSend, buttonTextShowi
   )
 }
 
-export default ModalPrueba
+export default Modal
