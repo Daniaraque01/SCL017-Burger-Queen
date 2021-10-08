@@ -13,6 +13,7 @@ import Card from './components/Card';
 import { collection, getDocs } from "firebase/firestore";
 import 'bootstrap/dist/js/bootstrap'
 
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -20,10 +21,10 @@ import {
   Link,
   NavLink
 } from "react-router-dom";
-import { useEffect } from 'react';
 
 
 function App() {
+
   return (
     <CartProvider>
     <Router>

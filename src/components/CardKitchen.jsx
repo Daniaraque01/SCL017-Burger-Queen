@@ -47,8 +47,8 @@ const CardKitchen = () => {
                             <hr/>
                             <h3 className="card-subtitle mb-2 text-center">Pedido</h3>
                             <ul>
-                                <li className="card-text fs-3">
-                                {comanda.tipe}: {comanda.quantity}
+                                <li className="card-text fs-3"> /*mapear array*/ /*posicion*/
+                                {comanda.id.tipe}: {comanda.quantity}
                                 </li>
                                 <li className="card-text fs-3">
                                 {comanda.price}
