@@ -1,22 +1,24 @@
 import React from 'react'
 import { useCart } from "react-use-cart"
+import ModalPrueba from './ModalPrueba';
+
 import DropDown from './DropDown';
 import { collection, onSnapshot , addDoc} from '@firebase/firestore';
 import db from "../configfb";
 
 
 const Cart = () => {
-    const { 
-            isEmpty,
-            totalUniqueItems,
-            items,
-            totalItems,
-            cartTotal,
-            updateItemQuantity,
-            removeItem,
-            emptyCart,
-         } = useCart();
-         if(isEmpty) return <h1 className = "text-center">No hay Pedidos</h1>
+    const {
+        isEmpty,
+        totalUniqueItems,
+        items,
+        totalItems,
+        cartTotal,
+        updateItemQuantity,
+        removeItem,
+        emptyCart,
+    } = useCart();
+    if (isEmpty) return <h1 className="text-center">No hay Pedidos</h1>
 
 
           const sendToKitchen = async ()=>{
@@ -61,10 +63,12 @@ const Cart = () => {
                 <p className="text-end fs-3">Total a Pagar: ${cartTotal}</p>
             </div>
             <div className="col-auto">
-                <button className="btn btn-success btn-sm m-2" onClick={sendToKitchen}>Enviar a Cocina</button>
-                <button className="btn btn-danger btn-sm m-2" onClick={()=>emptyCart()}>Eliminar Comanda</button>
-            </div>
-         </div>
+
+                    <ModalPrueba name="modal1" className="btn btn-danger m-2" buttonTextShowingTheModal="Enviar a cocina" title="¿estas seguro?" description="este pedido se enviara a cocina" textCancel="Cancelar" textSend="Enviar" />
+                    <ModalPrueba name="modal2" className="btn btn-danger m-2" buttonTextShowingTheModal="eliminar comanda" title="¿estas seguro?" description="este pedido se eliminara" textCancel="Cancelar" textSend="Eliminar" onClick={() => emptyCart()}/>
+
+                    </div>
+                </div>
         </section>
     )
 }

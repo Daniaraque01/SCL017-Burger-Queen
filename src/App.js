@@ -8,9 +8,11 @@ import ChefImg from './components/ChefImg';
 import WaistressImg from './components/WaitressImg'; 
 import CartHome from './components/CartHome';
 import GoBack from './components/GoBack';
-import Cart from "./components/Cart"
 import { CartProvider } from 'react-use-cart';
 import Card from './components/Card';
+import { collection, getDocs } from "firebase/firestore";
+import 'bootstrap/dist/js/bootstrap'
+
 
 import {
   BrowserRouter as Router,
@@ -21,9 +23,8 @@ import {
 } from "react-router-dom";
 
 
-
 function App() {
- 
+
   return (
     <CartProvider>
     <Router>

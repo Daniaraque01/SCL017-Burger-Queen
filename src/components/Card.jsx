@@ -2,16 +2,16 @@ import React from 'react';
 import { useCart } from 'react-use-cart';
 import "bootstrap/dist/css/bootstrap.css";
 import './Card.css';
+import GoBack from './GoBack';
+import { useState } from 'react';
 
 
-
- const Card = (props) => {
-         
-
+const Card = (props) => {
   const { addItem } = useCart();
 
             return (
                 <div className="d-flex SecondView">
+                 <div className="card w-50 mb-3 cardShadow">
                  <div className="card w-50 mb-3 cardShadow">
                  <div className="row">
                    <div className="col-md-3">
@@ -24,10 +24,7 @@ import './Card.css';
                      <p className="card-text">{props.desc}</p>
                      <h3 className="float-h3">${props.price}</h3>
                      <button className="btn btn-warning btn-lg" onClick= {() => addItem(props.item)}>Añadir</button>
-                       {/* <h2 className="card-title">{data.tipo}</h2>
-                     <p className="card-text">{data.descripcion}</p>
-                <ContadorCarta/>
-                <h3 className="float-h3">{data.precio}</h3> */}
+
               </div>
             </div>
           </div>

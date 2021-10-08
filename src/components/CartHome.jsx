@@ -5,7 +5,7 @@ import menu from "../menu.json"
 import Cart from './Cart';
 
 const CartHome = () => {
-    const loadData = () =>JSON.parse(JSON.stringify(menu));
+    const loadData = () => JSON.parse(JSON.stringify(menu));
     return (
         <div>
             <div className="SecondView">
