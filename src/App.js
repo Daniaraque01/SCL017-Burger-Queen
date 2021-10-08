@@ -11,7 +11,6 @@ import GoBack from './components/GoBack';
 import { CartProvider } from 'react-use-cart';
 import Card from './components/Card';
 import { collection, getDocs } from "firebase/firestore";
-import db from './Firebase/FirebaseConfig';
 import 'bootstrap/dist/js/bootstrap'
 
 import {
@@ -25,23 +24,12 @@ import { useEffect } from 'react';
 
 
 function App() {
-  useEffect(() => {
-
-    const obtenerDatos = async() => {
-    const datos = await getDocs(collection(db, 'sushi'));
-    console.log(datos , 'datos');
-  }
-
-  obtenerDatos();
-
-  },[]);
   return (
     <CartProvider>
     <Router>
       <Switch>
         <Route path="/" exact>
         <div className="startPage">
-          <GoBack />
         <Tittle />
           <SelectYourRole />
           <Link to = "/mesas">

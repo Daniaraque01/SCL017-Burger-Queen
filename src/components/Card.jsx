@@ -10,25 +10,34 @@ import { useState } from 'react';
 
 const Card = (props) => {
   const { addItem } = useCart();
-  return (
-    <div className="SecondView">
-      <div className="card mb-3 cardShadow">
-        <div className="row no-gutters">
-          <div className="col-md-3">
-            <img src={props.img} className="card-img" alt="" />
-          </div>
-          <div className="col-md-8">
-            <div className="card-body">
-              <h2 className="card-title">{props.title}</h2>
-              <p className="card-text">{props.desc}</p>
-              <h3 className="float-h3">${props.price}</h3>
-              <button className="btn btn-warning btn-lg" onClick={() => addItem(props.item)}>Añadir</button>
+        
+/*const [number, setNumber] = useState(0);
+const increment = () =>setNumber(number + 1);
+let decrement= () => setNumber(number -1);*/
 
+          
+
+            return (
+                <div className="d-flex SecondView">
+                 <div /* item = {data} key={index}  */className="card w-50 mb-3 cardShadow">
+                 <div className="row">
+                   <div className="col-md-3">
+                     <img src={props.img} className="card-img" alt=""/>
+                   </div>
+                   <div className="col-md-9">
+                     <div className="card-body">
+
+                       <h2 className="card-title">{props.title}</h2>
+                     <p className="card-text">{props.desc}</p>
+                     <h3 className="float-h3">${props.price}</h3>
+                     <button className="btn btn-warning btn-lg" onClick= {() => addItem(props.item)}>Añadir</button>
+              </div>
             </div>
           </div>
+          </div>
         </div>
-      </div>
-    </div>
-  )
-}
+            )
+        }
+
+
 export default Card
