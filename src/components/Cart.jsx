@@ -3,7 +3,7 @@ import { useCart } from "react-use-cart"
 import Modal from './Modal';
 
 import DropDown from './DropDown';
-import { collection, onSnapshot , addDoc} from '@firebase/firestore';
+import { collection, onSnapshot , addDoc, serverTimestamp} from '@firebase/firestore';
 import db from "../configfb";
 
 
@@ -23,7 +23,7 @@ const Cart = () => {
 
           const sendToKitchen = async ()=>{
          const collectionRef= collection(db,"Comandas");
-         const payload = {items}      /* aqui como objetos irian los datos de la tabla  */ 
+         const payload = {items, timestamp: serverTimestamp()}      /* aqui como objetos irian los datos de la tabla  */ 
           await addDoc(collectionRef, payload); 
           }
          
@@ -63,7 +63,8 @@ const Cart = () => {
                 <p className="text-end fs-3">Total a Pagar: ${cartTotal}</p>
             </div>
             <div className="col-auto">
-                    <Modal name="modal1" className="btn btn-danger m-2" buttonTextShowingTheModal="Enviar a cocina" title="¿estas seguro?" description="este pedido se enviara a cocina" textCancel="Cancelar" textSend="Enviar" />
+                    {/* <Modal name="modal1" className="btn btn-danger m-2" buttonTextShowingTheModal="Enviar a cocina" title="¿estas seguro?" description="este pedido se enviara a cocina" textCancel="Cancelar" textSend="Enviar" onClick={sendToKitchen}/> */}
+                    <button className="btn btn-danger m-2" onClick={sendToKitchen}>Enviar a Cocina</button>
                     <Modal name="modal2" className="btn btn-danger m-2" buttonTextShowingTheModal="eliminar comanda" title="¿estas seguro?" description="este pedido se eliminara" textCancel="Cancelar" textSend="Eliminar" onClick={() => emptyCart()}/>
 
                     </div>
