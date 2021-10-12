@@ -5,9 +5,12 @@ import Modal from './Modal';
 import DropDown from './DropDown';
 import { collection, onSnapshot , addDoc} from '@firebase/firestore';
 import db from "../configfb";
+import { useHistory } from "react-router-dom";
 
 
 const Cart = () => {
+    const history = useHistory(); 
+
     const {
         isEmpty,
         totalUniqueItems,
@@ -27,12 +30,19 @@ const Cart = () => {
           await addDoc(collectionRef, payload); 
           }
          
-
-
+const send = () => {
+    
+sendToKitchen();  
+emptyCart();      
+     
+}
          
 
     return (
         <section className = "py-4 container">
+            <button onClick={history.goBack} className="btn btn-outline-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+  <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+</svg></button>
          <div className="row justify-content-center">
             <div className="col-12">
                 <h5>Productos totales ({totalUniqueItems})</h5>
@@ -63,7 +73,7 @@ const Cart = () => {
                 <p className="text-end fs-3">Total a Pagar: ${cartTotal}</p>
             </div>
             <div className="col-auto">
-                    <Modal name="modal1" className="btn btn-danger m-2" buttonTextShowingTheModal="Enviar a cocina" title="¿estas seguro?" description="este pedido se enviara a cocina" textCancel="Cancelar" textSend="Enviar" />
+                    <Modal name="modal1" className="btn btn-danger m-2" buttonTextShowingTheModal="Enviar a cocina" title="¿estas seguro?" description="este pedido se enviara a cocina" textCancel="Cancelar" textSend="Enviar" onClick={() => send()} />
                     <Modal name="modal2" className="btn btn-danger m-2" buttonTextShowingTheModal="eliminar comanda" title="¿estas seguro?" description="este pedido se eliminara" textCancel="Cancelar" textSend="Eliminar" onClick={() => emptyCart()}/>
 
                     </div>

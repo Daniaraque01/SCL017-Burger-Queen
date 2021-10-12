@@ -1,11 +1,7 @@
 import React, { Fragment } from 'react'
-import { useCart } from "react-use-cart"
 
-const Modal = ({ title, description, textCancel, textSend, buttonTextShowingTheModal , className, name}) => {
- const {
-  emptyCart
-  
- } = useCart();
+const Modal = ({ title, description, textCancel, textSend, buttonTextShowingTheModal , className, name, onClick}) => {
+
 
   return (
     <Fragment>
@@ -27,7 +23,7 @@ const Modal = ({ title, description, textCancel, textSend, buttonTextShowingTheM
             </div>
             <div className="modal-footer">
               <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">{textCancel}</button>
-              <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={() => emptyCart()}>{textSend}</button>
+              <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={() => onClick()}>{textSend}</button>
             </div>
           </div>
         </div>
