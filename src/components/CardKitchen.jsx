@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect , useState } from 'react'; // para importar cosas de una api o db
-import { collection, onSnapshot , addDoc, query, orderBy} from '@firebase/firestore';
+import { collection, onSnapshot , addDoc, query, orderBy, where} from '@firebase/firestore';
 import db from "../configfb";
 
 
@@ -13,7 +13,8 @@ const CardKitchen = () => {
     useEffect(
         ()=>{
             const collectionRef = collection(db, "Comandas")
-            const q = query(collectionRef, orderBy("timestamp" , "desc") )
+            const q = query(collectionRef,/*  where("tipo", "==", true) */ orderBy("timestamp" , "desc") )
+             /* const arrayQuery = collectionRef.where("items","array-contains") */
         
             const snapShot= onSnapshot(q,(snapshot) =>
             setComandas(snapshot.docs.map((doc) => ({...doc.data(), id: doc.id })))
@@ -50,14 +51,16 @@ const CardKitchen = () => {
                             <h2 className="card-title text-end">Hora</h2>
                             <hr/>
                             <h3 className="card-subtitle mb-2 text-center">Pedido</h3>
+                            {comanda.items.map(({ tipo, quantity, timestamp }) => (
                             <ul>
-                                <li className="card-text fs-3"> /*mapear array*/ /*posicion*/
-                                {comanda.id.tipe}: {comanda.quantity}
+                                <li className="card-text fs-3"> 
+                                <p>{tipo} x{quantity}</p>
                                 </li>
-                                <li className="card-text fs-3">
-                                {comanda.price}
-                                </li>
+                                {/* <li className="card-text fs-3">
+                                {quantity}
+                                </li> */}
                             </ul>
+                            ))}
                             {/* <p className="card-text">{comanda.tipe}: {comanda.quantity}</p> */}
                             <button className="btn btn-success btn-lg">Listo</button>
                             {/* <button className="btn btn-success btn-lg m-2"  onClick={handleNew} >Enviar a firebas(Prueba)</button> */}
