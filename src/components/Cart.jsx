@@ -5,9 +5,13 @@ import Modal from './Modal';
 import DropDown from './DropDown';
 import { collection, onSnapshot , addDoc, serverTimestamp} from '@firebase/firestore';
 import db from "../configfb";
+import { useHistory } from "react-router-dom";
+import { Fragment } from 'react';
 
 
 const Cart = () => {
+     
+
     const {
         isEmpty,
         totalUniqueItems,
@@ -27,8 +31,12 @@ const Cart = () => {
           await addDoc(collectionRef, payload); 
           }
          
-
-
+const send = () => {
+    
+sendToKitchen();  
+emptyCart();      
+     
+}
          
 
     return (
@@ -37,14 +45,14 @@ const Cart = () => {
             <div className="col-12">
                 <h5>Productos totales ({totalUniqueItems})</h5>
                 <DropDown />
+
+                <p className="text-end">Mesa{/* {value} */}</p> 
                 <table className="table table-light table-hover m-0">
                     <tbody>
                     {items.map((item, index)=>{
                         return(
+                            
                         <tr key={index}>
-                            <td>
-                                <img src= {item.foto} style={{height:'6rem'}} />
-                            </td>
                             <td>{item.tipo}</td>
                             <td>{item.price}</td>
                             <td>X{item.quantity}</td>
@@ -63,8 +71,7 @@ const Cart = () => {
                 <p className="text-end fs-3">Total a Pagar: ${cartTotal}</p>
             </div>
             <div className="col-auto">
-                    {/* <Modal name="modal1" className="btn btn-danger m-2" buttonTextShowingTheModal="Enviar a cocina" title="¿estas seguro?" description="este pedido se enviara a cocina" textCancel="Cancelar" textSend="Enviar" onClick={sendToKitchen}/> */}
-                    <button className="btn btn-danger m-2" onClick={sendToKitchen}>Enviar a Cocina</button>
+                    <Modal name="modal1" className="btn btn-danger m-2" buttonTextShowingTheModal="Enviar a cocina" title="¿estas seguro?" description="este pedido se enviara a cocina" textCancel="Cancelar" textSend="Enviar" onClick={() => send()} />
                     <Modal name="modal2" className="btn btn-danger m-2" buttonTextShowingTheModal="eliminar comanda" title="¿estas seguro?" description="este pedido se eliminara" textCancel="Cancelar" textSend="Eliminar" onClick={() => emptyCart()}/>
 
                     </div>
