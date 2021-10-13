@@ -12,7 +12,7 @@ const Card = (props) => {
             return (
                 <div className="d-flex SecondView" >
                  
-                 <div className="sizeImg card  mb-3 cardShadow">
+                 <div className="card  mb-3 cardShadow">
                  <div className="row">
                    <div className="col-md-3">
                      <img src={props.img} className="card-img" alt=""/>

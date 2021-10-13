@@ -6,7 +6,6 @@ import { collection, onSnapshot , addDoc, serverTimestamp, Timestamp} from '@fir
 import db from "../configfb";
 import { useHistory } from "react-router-dom";
 import { Fragment } from 'react';
-import logoTwo from './LogoTwo';
 
 const Cart = () => {
      
@@ -62,7 +61,6 @@ emptyCart();
         <section className = "py-4 container">
          <div className="row justify-content-center">
             <div className="col-12">
-            <logoTwo/>
                 <h5>Productos totales ({totalUniqueItems})</h5>
                 <DropDown table={value} test ={test}/>
                 <table className="table table-light table-hover m-0">
