@@ -2,7 +2,7 @@ import React from 'react'
 import { useCart } from "react-use-cart"
 import Modal from './Modal';
 import DropDown from './DropDown';
-import { collection, onSnapshot , addDoc, serverTimestamp} from '@firebase/firestore';
+import { collection, onSnapshot , addDoc, serverTimestamp, Timestamp} from '@firebase/firestore';
 import db from "../configfb";
 import { useHistory } from "react-router-dom";
 import { Fragment } from 'react';
@@ -23,13 +23,28 @@ const Cart = () => {
     } = useCart();
     if (isEmpty) return <h1 className="text-center">No hay Pedidos</h1>
 
+    const getDate = () => {
+        const today = new Date();
+        const date = `${today.getDate()} - ${(today.getMonth() + 1)} - ${today.getFullYear()}`;
+        const hour = `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
+        const totalDate = `${hour} ${date}`;
+        return totalDate;
+      };
+
+// localstorage, sessionstorage
+      const getValueOption = () =>{
+
+      }
 
           const sendToKitchen = async ()=>{
+         /*const timestamp = Timestamp.toDate() Timestamp.fromDate(new Date()) */
          const collectionRef= collection(db,"Comandas");
-         const payload = {items, timestamp: serverTimestamp()}      /* aqui como objetos irian los datos de la tabla  */ 
+         const payload = {items, timestamp: serverTimestamp(), time:getDate()}      /* aqui como objetos irian los datos de la tabla  */ 
           await addDoc(collectionRef, payload); 
           }
          
+       
+
 const send = () => {
     
 sendToKitchen();  
