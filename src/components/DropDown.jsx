@@ -25,7 +25,7 @@ const handleSelect=(e)=>{
         <div>
           <div className="bg-white">
             <div class="dropdown">
-  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" /* onSelect={handleSelect}  */ data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-danger ms-2 dropdown-toggle" type="button" id="dropdownMenuButton1" /* onSelect={handleSelect}  */ data-bs-toggle="dropdown" aria-expanded="false">
   Mesa
 </button>
 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" /* onSelect={handleSelect} */>
