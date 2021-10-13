@@ -9,7 +9,7 @@ import { useHistory } from "react-router-dom";
 import { Fragment } from 'react';
 
 
-const Cart = () => {
+const Cart = ({value}) => {
      
 
     const {
@@ -46,7 +46,7 @@ emptyCart();
                 <h5>Productos totales ({totalUniqueItems})</h5>
                 <DropDown />
 
-                <p className="text-end">Mesa{/* {value} */}</p> 
+                <p className="text-end">Mesa{value}</p> 
                 <table className="table table-light table-hover m-0">
                     <tbody>
                     {items.map((item, index)=>{

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 
-const Modal = ({ title, description, textCancel, textSend, buttonTextShowingTheModal , className, name, onClick}) => {
+const Modal = ({ title, description, textCancel, textSend, buttonTextShowingTheModal , className, name, onClick, }) => {
 
 
   return (
