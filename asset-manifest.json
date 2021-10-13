@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/SCL017-Burger-Queen/static/css/main.7debb14a.chunk.css",
-    "main.js": "/SCL017-Burger-Queen/static/js/main.b9e9a98a.chunk.js",
-    "main.js.map": "/SCL017-Burger-Queen/static/js/main.b9e9a98a.chunk.js.map",
+    "main.js": "/SCL017-Burger-Queen/static/js/main.4f86e0ed.chunk.js",
+    "main.js.map": "/SCL017-Burger-Queen/static/js/main.4f86e0ed.chunk.js.map",
     "runtime-main.js": "/SCL017-Burger-Queen/static/js/runtime-main.887b38b4.js",
     "runtime-main.js.map": "/SCL017-Burger-Queen/static/js/runtime-main.887b38b4.js.map",
     "static/css/2.53150396.chunk.css": "/SCL017-Burger-Queen/static/css/2.53150396.chunk.css",
-    "static/js/2.36fc7b2b.chunk.js": "/SCL017-Burger-Queen/static/js/2.36fc7b2b.chunk.js",
-    "static/js/2.36fc7b2b.chunk.js.map": "/SCL017-Burger-Queen/static/js/2.36fc7b2b.chunk.js.map",
+    "static/js/2.ab2a874b.chunk.js": "/SCL017-Burger-Queen/static/js/2.ab2a874b.chunk.js",
+    "static/js/2.ab2a874b.chunk.js.map": "/SCL017-Burger-Queen/static/js/2.ab2a874b.chunk.js.map",
     "static/js/3.26ce19f6.chunk.js": "/SCL017-Burger-Queen/static/js/3.26ce19f6.chunk.js",
     "static/js/3.26ce19f6.chunk.js.map": "/SCL017-Burger-Queen/static/js/3.26ce19f6.chunk.js.map",
     "index.html": "/SCL017-Burger-Queen/index.html",
     "static/css/2.53150396.chunk.css.map": "/SCL017-Burger-Queen/static/css/2.53150396.chunk.css.map",
     "static/css/main.7debb14a.chunk.css.map": "/SCL017-Burger-Queen/static/css/main.7debb14a.chunk.css.map",
-    "static/js/2.36fc7b2b.chunk.js.LICENSE.txt": "/SCL017-Burger-Queen/static/js/2.36fc7b2b.chunk.js.LICENSE.txt",
+    "static/js/2.ab2a874b.chunk.js.LICENSE.txt": "/SCL017-Burger-Queen/static/js/2.ab2a874b.chunk.js.LICENSE.txt",
     "static/media/Cocinero.36c830a6.png": "/SCL017-Burger-Queen/static/media/Cocinero.36c830a6.png",
     "static/media/Card.css": "/SCL017-Burger-Queen/static/media/PantallaDos.b5f53570.jpeg",
     "static/media/SushiSanKun.d08718d5.png": "/SCL017-Burger-Queen/static/media/SushiSanKun.d08718d5.png",
@@ -23,8 +23,8 @@
   "entrypoints": [
     "static/js/runtime-main.887b38b4.js",
     "static/css/2.53150396.chunk.css",
-    "static/js/2.36fc7b2b.chunk.js",
+    "static/js/2.ab2a874b.chunk.js",
     "static/css/main.7debb14a.chunk.css",
-    "static/js/main.b9e9a98a.chunk.js"
+    "static/js/main.4f86e0ed.chunk.js"
   ]
 }
