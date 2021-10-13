@@ -10,9 +10,9 @@ const Card = (props) => {
   const { addItem } = useCart();
 
             return (
-                <div className="d-flex SecondView">
-                 <div className="card w-50 mb-3 cardShadow">
-                 <div className="card w-50 mb-3 cardShadow">
+                <div className="d-flex SecondView" >
+                 
+                 <div className="sizeImg card  mb-3 cardShadow">
                  <div className="row">
                    <div className="col-md-3">
                      <img src={props.img} className="card-img" alt=""/>
@@ -25,7 +25,6 @@ const Card = (props) => {
                      <h3 className="float-h3">${props.price}</h3>
                      <button className="btn btn-warning btn-lg" onClick= {() => addItem(props.item)}>Añadir</button>
                      </div>
-              </div>
             </div>
           </div>
           </div>

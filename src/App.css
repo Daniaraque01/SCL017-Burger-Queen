@@ -56,6 +56,15 @@
   background-image: url("./assets/fondoPrimeraPagina.png");
 }
 
+.home{
+margin-top: 2%;
+}
+
+.imgSushi{
+  width: 10%;
+  height: 10%;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -63,4 +72,6 @@
   to {
     transform: rotate(360deg);
   }
+
 }
+

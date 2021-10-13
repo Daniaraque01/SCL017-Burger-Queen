@@ -7,15 +7,27 @@ import Cart from './Cart';
 const CartHome = () => {
     const loadData = () => JSON.parse(JSON.stringify(menu));
     return (
-        <div>
-            <div className="SecondView">
-                    <Tittle />
-                    <Cart />
-                    {menu.todoMenu.map((item, index)=>(
+        <div class="SecondView">
+              <div class="row">
+    <div class="col">
+    <Tittle />
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-4">
+    {menu.todoMenu.map((item, index)=>(
                     <Card  img= {item.foto} title ={item.tipo} desc={item.descripcion} price={item.price} item={item} key= {index}/>
                     ))}
-            </div>
-        </div>
+    </div>
+    <div class="col-8">
+    <Cart />
+
+    </div>
+  </div>
+
+</div>
+      
     )
 }
 
