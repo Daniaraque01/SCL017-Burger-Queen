@@ -2,14 +2,14 @@ import React from 'react'
 import { useState } from 'react';
 import { Fragment } from 'react'
 
-const DropDown = () => {
+const DropDown = ({test, table}) => {
 
-  const [value,setValue]= useState('');
+  /* const [value,setValue]= useState('');
 
   const test =(e) =>{
     setValue(e.target.id)
     console.log(e.target.id)
-  }
+  } */
 /* const getSelectedValue = () =>{
  document.getElementById("dropDownMesas").value; 
  console.log(getSelectedValue)
@@ -37,7 +37,7 @@ const handleSelect=(e)=>{
 </ul>
 </div>
             
-              <p className="text-end">Mesa: {value}</p>
+              <p className="text-end">Mesa: {table}</p>
             </div>
         </div>
 
