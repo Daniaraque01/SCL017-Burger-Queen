@@ -53,7 +53,7 @@ Esta vista fué diseñada para que el cocinero pueda ver los pedidos que el meso
 ![Vista-Cocinerx](src/assets/vista3.PNG)
 
 ## 3. Test de Usabilidad
-PRONTO
+PRONTO lo haremos 
 
 
 <details>
