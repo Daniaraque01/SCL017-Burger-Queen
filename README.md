@@ -11,46 +11,48 @@ Del menú los clientes pueden escoger entre tablas veganas o de origen animal ju
 
 
 
-## 2.Organización del Proyecto
+## 2. Organización del Proyecto
 
 Para realizar nuestro proyecto, nos organizamos en la plataforma Trello. Desglosamos cada tarea en base a las Historias de usuario y las asignamos a cada sprint.
 Además, seguimos la metodología “Scrum” realizando cada día ceremonias de daily y por cada fin de sprint, su respectiva retrospectiva junto con sprint planning. 
 
 ![Trello](src/assets/organizaciontrello.PNG)
 
-## 3.Prototipo de alta fidelidad 
+## 3. Prototipo de alta fidelidad 
 
 Nuestro prototipo de alta fidelidad fué diseñado en Figma tomando en cuenta los requerimientos del proyecto y diseñado por cada vista. De modo que sea factible al momento que el usuario use la aplicación.
 
 ![Prototipo-de-alta](src/assets/prototiposdealta.PNG)
 
-**Paleta de colores**
+### Paleta de colores
+
 Decidimos elegir esta paleta de colores para establecer una guía de estilos, para poder decorar nuestra página web, siendo una posibilidad para generar diferentes sensaciones en el “look and feel” de nuestra aplicación.
 
 ![Paleta-de-colores](src/assets/paletadecolores.png)
 
 
-## 4.Aplicación “SushiSan-Kun” 
-**Vista principal**
+## 4. Aplicación “SushiSan-Kun” 
+
+### Vista principal
 
 Esta vista está diseñada para el ingreso del flujo, una para el mesero y otra para el cocinero.
 
 ![Vista-principal](src/assets/vista1.PNG)
 
 
-**Vista Meserx**
+### Vista Meserx
 
 Esta vista fue diseñada para que el mesero pueda volver a la página principal, y ver las opciones de la carta para seleccionar de acuerdo a lo requerido por el cliente, una vez tomado el pedido, deberá seleccionar el número de mesa, y enviar a cocina, además el usuario tendrá la opción de poder eliminar un pedido si tiene alguna equivocación, o eliminar la comanda completa. 
 
 ![Vista-Meserx](src/assets/vista2.PNG)
 
-**Vista Cocinerx**
+### Vista Cocinerx
 
 Esta vista fué diseñada para que el cocinero pueda ver los pedidos que el mesonero le ha enviado, donde le aparecerá por orden de hora y fecha junto con el número de mesa , y la descripción del pedido total, una vez que el pedido esté listo para ser llevado al cliente deberá presionar el botón "listo". 
 
 ![Vista-Cocinerx](src/assets/vista3.PNG)
 
-## 3.Test de Usabilidad
+## 3. Test de Usabilidad
 PRONTO
 
 
