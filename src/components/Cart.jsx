@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { useCart } from "react-use-cart"
 import Modal from './Modal';
 import DropDown from './DropDown';
@@ -8,9 +8,9 @@ import { useHistory } from "react-router-dom";
 import { Fragment } from 'react';
 import logoTwo from './LogoTwo';
 
-const Cart = ({value}) => {
+const Cart = () => {
      
-
+    const [value,setValue]= useState('');
     const {
         isEmpty,
         totalUniqueItems,
@@ -32,14 +32,18 @@ const Cart = ({value}) => {
       };
 
 // localstorage, sessionstorage
-      const getValueOption = () =>{
-
-      }
+     
+        
+        const test =(e) =>{
+          setValue(e.target.id)
+          console.log(e.target.id)
+        }
+      
 
           const sendToKitchen = async ()=>{
          /*const timestamp = Timestamp.toDate() Timestamp.fromDate(new Date()) */
          const collectionRef= collection(db,"Comandas");
-         const payload = {items, timestamp: serverTimestamp(), time:getDate()}      /* aqui como objetos irian los datos de la tabla  */ 
+         const payload = {items, timestamp: serverTimestamp(), time:getDate(), table: value}      /* aqui como objetos irian los datos de la tabla  */ 
           await addDoc(collectionRef, payload); 
           }
          
@@ -60,7 +64,7 @@ emptyCart();
             <div className="col-12">
             <logoTwo/>
                 <h5>Productos totales ({totalUniqueItems})</h5>
-                <DropDown />
+                <DropDown table={value} test ={test}/>
                 <table className="table table-light table-hover m-0">
                     <tbody>
                     {items.map((item, index)=>{
