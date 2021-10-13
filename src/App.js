@@ -26,8 +26,8 @@ import {
 function App() {
 
   return (
-    <CartProvider>
-    <Router>
+  
+    
       <Switch>
         <Route path="/" exact>
         <div className="startPage">
@@ -52,8 +52,8 @@ function App() {
         </Route>
 
       </Switch>
-    </Router>
-    </CartProvider>
+ 
+
   );
 }
 

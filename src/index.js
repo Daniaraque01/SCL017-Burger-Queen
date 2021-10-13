@@ -4,13 +4,18 @@ import './index.css';
 import App from './App';
 import { CartProvider } from 'react-use-cart';
 import reportWebVitals from './reportWebVitals';
+import { HashRouter} from "react-router-dom";
 
 ReactDOM.render(
-  // <React.StrictMode>
+  <React.StrictMode>
+  <HashRouter basename='/'>
     <CartProvider>
-    <App />
-    </CartProvider>,
-  // </React.StrictMode>,
+   
+      <App />
+   
+    </CartProvider>
+    </HashRouter>
+  </React.StrictMode>,
   document.getElementById('root')
 );
 

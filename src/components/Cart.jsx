@@ -34,6 +34,7 @@ const Cart = () => {
      
         
         const test =(e) =>{
+            
           setValue(e.target.id)
           console.log(e.target.id)
         }
@@ -62,7 +63,7 @@ emptyCart();
          <div className="row justify-content-center">
             <div className="col-12">
                 <h5>Productos totales ({totalUniqueItems})</h5>
-                <DropDown table={value} test ={test}/>
+                <DropDown table={value} test={test}/>
                 <table className="table table-light table-hover m-0">
                     <tbody>
                     {items.map((item, index)=>{

@@ -29,11 +29,11 @@ const handleSelect=(e)=>{
   Mesa
 </button>
 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" /* onSelect={handleSelect} */>
-  <li><a class="dropdown-item" onClick={test} id="1" href="#">Mesa 1</a></li>
-  <li><a class="dropdown-item" onClick={test} id="2" href="#">Mesa 2</a></li>
-  <li><a class="dropdown-item" onClick={test} id="3" href="#">Mesa 3</a></li>
-  <li><a class="dropdown-item" onClick={test} id="4" href="#">Mesa 4</a></li>
-  <li><a class="dropdown-item" onClick={test} id="5" href="#">Mesa 5</a></li>
+  <li><a class="dropdown-item" onClick={test} id="1" >Mesa 1</a></li>
+  <li><a class="dropdown-item" onClick={test} id="2" >Mesa 2</a></li>
+  <li><a class="dropdown-item" onClick={test} id="3" >Mesa 3</a></li>
+  <li><a class="dropdown-item" onClick={test} id="4" >Mesa 4</a></li>
+  <li><a class="dropdown-item" onClick={test} id="5" >Mesa 5</a></li>
 </ul>
 </div>
             
