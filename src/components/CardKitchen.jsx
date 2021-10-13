@@ -48,7 +48,7 @@ const CardKitchen = () => {
                         <div key ={comanda.id} className="card m-5">
                         <div className="card-body">
                             <h1 className="card-title">Mesa {comanda.table} {/* //comanda.id */}</h1>
-                            <h2 className="card-title text-end">Hora {comanda.timestamp.nanoseconds}</h2>
+                            <h2 className="card-title text-end">{comanda.time}</h2>
                             <hr/>
                             <h3 className="card-subtitle mb-2 text-center">Pedido</h3>
                             {comanda.items.map(({ tipo, quantity, timestamp }) => (
@@ -71,7 +71,7 @@ const CardKitchen = () => {
                 </div>
             </div>
         </div>
-        </div>
+    </div>
         )
         }
 
