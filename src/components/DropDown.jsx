@@ -4,30 +4,41 @@ import { Fragment } from 'react'
 
 const DropDown = () => {
 
-const [value,setValue]= useState('');
+  const [value,setValue]= useState('');
+
+  const test =(e) =>{
+    setValue(e.target.id)
+    console.log(e.target.id)
+  }
+/* const getSelectedValue = () =>{
+ document.getElementById("dropDownMesas").value; 
+ console.log(getSelectedValue)
+} */
+/* const [value,setValue]= useState('');
 
 const handleSelect=(e)=>{
   console.log(e);
   setValue(e)
-} 
+} */
   
     return (
         <div>
-            <div class="dropdown" >
-  <button class="btn btn-danger ms-2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          <div className="bg-white">
+            <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" /* onSelect={handleSelect}  */ data-bs-toggle="dropdown" aria-expanded="false">
   Mesa
 </button>
-<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" onSelect={handleSelect} >
-  <li><a class="dropdown-item"  eventKey="mesa-1" href="#">Mesa 1</a></li>
-  <li><a class="dropdown-item" eventKey="mesa-2" href="#">Mesa 2</a></li>
-  <li><a class="dropdown-item" eventKey="mesa-3"href="#">Mesa 3</a></li>
-  <li><a class="dropdown-item" eventKey="mesa-4"href="#">Mesa 4</a></li>
-  <li><a class="dropdown-item" eventKey="mesa-5"href="#">Mesa 5</a></li>
+<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" /* onSelect={handleSelect} */>
+  <li><a class="dropdown-item" onClick={test} id="1" href="#">Mesa 1</a></li>
+  <li><a class="dropdown-item" onClick={test} id="2" href="#">Mesa 2</a></li>
+  <li><a class="dropdown-item" onClick={test} id="3" href="#">Mesa 3</a></li>
+  <li><a class="dropdown-item" onClick={test} id="4" href="#">Mesa 4</a></li>
+  <li><a class="dropdown-item" onClick={test} id="5" href="#">Mesa 5</a></li>
 </ul>
 </div>
-<div>
-  <p>{value}</p>
-</div>          
+            
+              <p className="text-end">Mesa: {value}</p>
+            </div>
         </div>
 
 

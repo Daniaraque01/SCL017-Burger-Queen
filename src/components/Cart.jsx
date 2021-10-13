@@ -1,7 +1,6 @@
 import React from 'react'
 import { useCart } from "react-use-cart"
 import Modal from './Modal';
-
 import DropDown from './DropDown';
 import { collection, onSnapshot , addDoc, serverTimestamp} from '@firebase/firestore';
 import db from "../configfb";
@@ -45,8 +44,6 @@ emptyCart();
             <div className="col-12">
                 <h5>Productos totales ({totalUniqueItems})</h5>
                 <DropDown />
-
-                <p className="text-end">Mesa{value}</p> 
                 <table className="table table-light table-hover m-0">
                     <tbody>
                     {items.map((item, index)=>{
