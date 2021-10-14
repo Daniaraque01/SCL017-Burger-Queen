@@ -1,5 +1,4 @@
 import React from 'react'
-import { useHistory } from "react-router-dom";
 import SushiSanKun from '../assets/SushiSanKun.png'
 import Home from './Home'
 const Tittle = () => {

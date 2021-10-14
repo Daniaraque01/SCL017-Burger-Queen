@@ -2,10 +2,8 @@ import React, {useState} from 'react'
 import { useCart } from "react-use-cart"
 import Modal from './Modal';
 import DropDown from './DropDown';
-import { collection, onSnapshot , addDoc, serverTimestamp, Timestamp} from '@firebase/firestore';
+import { collection, addDoc, serverTimestamp} from '@firebase/firestore';
 import db from "../configfb";
-import { useHistory } from "react-router-dom";
-import { Fragment } from 'react';
 
 const Cart = () => {
      
@@ -14,7 +12,6 @@ const Cart = () => {
         isEmpty,
         totalUniqueItems,
         items,
-        totalItems,
         cartTotal,
         updateItemQuantity,
         removeItem,

@@ -1,25 +1,6 @@
 import React from 'react'
-import { useState } from 'react';
-import { Fragment } from 'react'
 
 const DropDown = ({test, table}) => {
-
-  /* const [value,setValue]= useState('');
-
-  const test =(e) =>{
-    setValue(e.target.id)
-    console.log(e.target.id)
-  } */
-/* const getSelectedValue = () =>{
- document.getElementById("dropDownMesas").value; 
- console.log(getSelectedValue)
-} */
-/* const [value,setValue]= useState('');
-
-const handleSelect=(e)=>{
-  console.log(e);
-  setValue(e)
-} */
   
     return (
         <div>

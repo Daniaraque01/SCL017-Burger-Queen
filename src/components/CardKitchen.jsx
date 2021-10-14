@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect , useState } from 'react'; // para importar cosas de una api o db
-import { collection, onSnapshot , addDoc, query, orderBy, where} from '@firebase/firestore';
+import { collection, onSnapshot , query, orderBy} from '@firebase/firestore';
 import db from "../configfb";
 
 

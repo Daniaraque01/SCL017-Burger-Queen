@@ -2,8 +2,6 @@ import React from 'react';
 import { useCart } from 'react-use-cart';
 import "bootstrap/dist/css/bootstrap.css";
 import './Card.css';
-import GoBack from './GoBack';
-import { useState } from 'react';
 
 
 const Card = (props) => {

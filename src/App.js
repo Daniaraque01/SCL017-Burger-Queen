@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import './App.css';
 import SelectYourRole from "./components/SelectYourRole"
 import Kitchen from './components/Kitchen';
@@ -7,19 +6,13 @@ import Tittle from './components/Tittle'
 import ChefImg from './components/ChefImg';
 import WaistressImg from './components/WaitressImg'; 
 import CartHome from './components/CartHome';
-import GoBack from './components/GoBack';
-import { CartProvider } from 'react-use-cart';
-import Card from './components/Card';
-import { collection, getDocs } from "firebase/firestore";
 import 'bootstrap/dist/js/bootstrap'
 
 
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
   Link,
-  NavLink
 } from "react-router-dom";
 
 
